@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18191b;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+}
+
+.logo-title {
+     color: #a4cefe;
+     font-family: "Inter", sans-serif;
+     font-size: 2rem;
+     font-style: italic;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.hyphen-1 {
+    color: #a4cefe;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.links:hover {
+    cursor: pointer;
+    background-color: #072446;
+    color: #a4cefe;
+    padding: 6px 12px;
+}
+
+.learn-link:hover {
+    background-color: #3f220d;
+    color: #febe8f;
+}
+
+.tools-link:hover {
+    background-color: #260e43;
+    color: #d8b8ff;
+}
+
+.about-link:hover {
+    background-color: #0c311c;
+    color: #70eba3;
+}
+
+.arrow {
+    font-size: 0.8rem;
+}
+
+.hyphen-2 {
+    color: #a4cefe;
+}
+
+.search-btn {
+    color: white;
+    border: 1px solid grey;
+    width: 85px;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-top: 8px;
+    margin-right: 20px;
+}
+
+.search-btn:hover {
+    background-color: #2d3034;
+}
+
+.log-in-btn {
+    color: white;
+}
+
+.log-in-btn:hover {
+    background-color: #2d3034;
+    width: 45px;
+    height: 25px;
+    padding-top: 4px;
+}
+
+
+
+/* SUB HEADER BAR */
+
+
+
+.sub-header {
+    background-color: #212426;
+    height: 35px;
+    border-top: 1.3px solid #51565d;
+     border-bottom: 1.3px solid #51565d;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: white;
+     font-family: sans-serif;
+     padding: 12px 24px;
+}
+
+.sub-header-navlink {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.sub-header-navlink:hover {
+       text-decoration: underline;
+}
+
+.right-arrow {
+    font-size: 0.8rem;
+    color: grey;
+    display: flex;
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+    gap: 40px;
+}
+
+.theme-lang-btn:hover {
+ background-color: #2d3034;
+    padding: 6px 12px;
+}
