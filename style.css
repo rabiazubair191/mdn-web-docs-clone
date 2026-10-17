@@ -108,6 +108,19 @@ nav a {
     padding-top: 4px;
 }
 
+.menu-icon {
+    color: white;
+    display: none;
+}
+
+.menu-icon:hover {
+    background-color: #2d3034;
+    width: 42px;
+    height: 30px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
 
 
 /* SUB HEADER BAR */
@@ -268,6 +281,7 @@ nav a {
 
 /* RIGHT SIDE BAR */
 
+
 .article-heading {
     display: flex;
     color: white;
@@ -278,11 +292,12 @@ nav a {
 
 .right-sidebar-link {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     color: white;
     text-decoration: none;
     padding: 7px 110px;
-    border-left: 4px solid pink;
+    padding-top: 0px;
 }
 
 .guide-link {
@@ -305,4 +320,43 @@ nav a {
     cursor: pointer;
     color: #a4cefe;
     text-decoration: underline;
+}
+
+
+/* CENTER CONTENT */
+
+
+/* .main-content-heading {
+    width: 55%;
+    height: auto;
+    background-color: pink;
+    margin: 0 auto;
+    display: flex;
+    align-content: flex-start;
+    text-align: right;
+    margin-bottom: 300px;
+} */
+
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 1030px) {
+    .links {
+        display: none;
+    }
+
+    .log-in-btn {
+        display: none;
+    }
+
+    .menu-icon {
+    /* display: flex;
+    font-size: 1rem; */
+    display: inline;
+}
+
+.menu-icon:hover .links {
+    display: flex;
+}
 }
