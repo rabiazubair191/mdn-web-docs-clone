@@ -15,7 +15,7 @@ body {
     align-items: center;
     font-size: 1.2rem;
     padding: 12px 24px;
-    position: sticky;
+    position: relative;
 }
 
 .logo-title {
@@ -344,6 +344,8 @@ nav a {
 @media (max-width: 1030px) {
     .links {
         display: none;
+        position: absolute;
+        top: 100%;
     }
 
     .log-in-btn {
@@ -351,12 +353,35 @@ nav a {
     }
 
     .menu-icon {
-    /* display: flex;
-    font-size: 1rem; */
-    display: inline;
+        display: flex;
+        font-size: 1rem;
+        display: inline;
+    }
+
+    .header:has(.menu-icon:hover) .links {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  padding: 15px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  /* background: none;
+  color: black; */
 }
 
-.menu-icon:hover .links {
-    display: flex;
+.header:has(.menu-icon:hover) .links a {
+  display: block !important;
+  width: 100%;
+  margin-bottom: 8px;
 }
+
+.left-sidebar {
+    display: none;
+}
+
+.right-sidebar {
+    justify-content: flex-start;
+}
+
 }
