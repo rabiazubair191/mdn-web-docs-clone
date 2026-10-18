@@ -157,6 +157,14 @@ nav a {
     align-items: center;
 }
 
+.theme-icon1 {
+    display: none;
+}
+
+.lang-icon1 {
+    display: none;
+}
+
 .btns {
     display: flex;
     gap: 40px;
@@ -281,6 +289,9 @@ nav a {
 
 /* RIGHT SIDE BAR */
 
+/* .right-sidebar {
+    display: flex;
+} */
 
 .article-heading {
     display: flex;
@@ -381,7 +392,27 @@ nav a {
 }
 
 .right-sidebar {
-    justify-content: flex-start;
+   display: flex;
+   justify-content: flex-start;
+   order: -1;
 }
 
+}
+
+
+@media (max-width: 660px) {
+    .theme-lang-btn {
+        display: none;
+    }
+
+    .theme-icon1 {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .lang-icon1 {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
