@@ -2,11 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #18191b;
     font-family: sans-serif;
+    /* overflow-x: hidden; */
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* background-color: black; */
 }
 
 .header {
@@ -15,7 +26,6 @@ body {
     align-items: center;
     font-size: 1.2rem;
     padding: 12px 24px;
-    position: relative;
 }
 
 .logo-title {
@@ -130,6 +140,7 @@ nav a {
 .sub-header {
     background-color: #212426;
     height: 35px;
+    width: 100vw;
     border-top: 1.3px solid #51565d;
     border-bottom: 1.3px solid #51565d;
     display: flex;
@@ -137,6 +148,8 @@ nav a {
     align-items: center;
     color: white;
     padding: 12px 24px;
+    position: fixed;
+    margin-top: 58px;
 }
 
 .sub-header-navlink {
@@ -179,17 +192,23 @@ nav a {
 
 /* MAIN CONTENT */
 
-
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    /* margin-left: 250px; */
+    /* justify-content: space-evenly; */
+}
 
 /* LEFT SIDE BAR */
 .left-sidebar {
     width: 250px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 80px);
     position: fixed;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thick;
     scrollbar-color: #d1d1d1 transparent;
+    margin-top: 80px;
 }
 
 .filter-box {
@@ -199,8 +218,8 @@ nav a {
 
 .filter-bar {
     background: none;
-    margin-top: 8px;
-    margin-left: 18px;
+    margin-top: 30px;
+    margin-left: 10px;
     padding: 12px 1px;
     padding-left: 50px;
     border-radius: 20px;
@@ -212,7 +231,7 @@ nav a {
     color: grey;
     font-size: 1rem;
     position: absolute;
-    top: 40%;
+    top: 55%;
     left: 35px;
 }
 
@@ -274,49 +293,117 @@ nav a {
     text-decoration: underline;
 }
 
-.sidebar-link {
+.sidebar-link1 {
     color: white;
     text-decoration: none;
     display: flex;
     padding: 12px 35px;
 }
 
-.sidebar-link:hover {
+.sidebar-link1:hover {
+    cursor: pointer;
+    color: #a4cefe;
+    text-decoration: underline;
+}
+
+.sidebar-link2 {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 12px 35px;
+}
+
+.sidebar-link2:hover {
+    cursor: pointer;
+    color: #a4cefe;
+    text-decoration: underline;
+}
+
+.Reference {
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.Reference:hover {
     cursor: pointer;
     color: #a4cefe;
     text-decoration: underline;
 }
 
 
+
 /* CENTER CONTENT */
 
 .center-content {
-    /* display: block; */
-    /* margin: auto; */
-    text-align: center;
-    /* margin-top: 20%; */
+    margin-left: 250px;
+    /* background-color: pink; */
+    flex-grow: 0.6;
+    text-align: left;
+    padding: 0 40px;
+    width: 40%;
+    margin-top: 60px;
 }
 
 .main-content-heading {
     color: white;
-    /* margin-top: 20px; */
+    padding-top: 60px;
+    padding-right: 12%;
+    font-size: 2.2rem;
+}
+
+.paragraph-1 {
+    color: white;
+    text-align: left;
+    font-size: 1.1rem;
+    padding-top: 2%;
+    padding-right: 4%;
+    line-height: 25px;
+}
+
+a {
+   color: #a4cefe;
+}
+
+a:hover {
+   color: #a4cefe;
+   text-decoration: none;
+}
+
+.anchor-styling {
+    color: #d8b8ff;
+}
+
+.anchor-styling:hover {
+    color: #d8b8ff;
+    text-decoration: none;
+}
+
+.mdn-refrence-img {
+       width: 90%;
+       margin-top: 5%;
+       height: 100%;
 }
 
 
 /* RIGHT SIDE BAR */
 
 .right-sidebar {
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    margin-left: auto;
+    position: fixed;
+    top: 80px;
+    right: 40px;
+    width: 250px;
+    line-height: 23px;
 }
 
 .article-heading {
     display: flex;
     color: white;
     justify-content: flex-end;
-    padding: 5px 85px;
+    padding: 50px 40px;
+    padding-bottom: 10px;
     font-size: 1.9rem;
     font-family: serif;
 }
@@ -324,27 +411,11 @@ nav a {
 .right-sidebar-link {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     color: white;
     text-decoration: none;
-    padding: 7px 110px;
+    padding: 7px 50px;
     padding-top: 0px;
-}
-
-.guide-link {
-    padding: 7px 195px;
-}
-
-.howto-link {
-    padding: 7px 195px;
-}
-
-.refrence-link {
-    padding: 7px 170px;
-}
-
-.topic-link {
-    padding: 7px 142px;
 }
 
 .right-sidebar-link:hover {
@@ -352,6 +423,7 @@ nav a {
     color: #a4cefe;
     text-decoration: underline;
 }
+
 
 
 
@@ -418,4 +490,20 @@ nav a {
         display: flex;
         justify-content: flex-end;
     }
+}
+
+/* Responsive adjustments for smaller screens, tablets, and laptops */
+@media screen and (max-width: 1024px) {
+  /* 1. Hide the sidebars so they don't crush your center text on smaller windows */
+  .left-sidebar, 
+  .right-sidebar {
+    display: none;
+  }
+
+  /* 2. Let your main center article take up the full available width */
+  .main-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
 }
