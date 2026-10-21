@@ -467,9 +467,22 @@ a:hover {
     }
 
     .right-sidebar {
-        display: flex;
-        justify-content: flex-start;
-        order: -1;
+        position: absolute;
+        top: 80px;          
+    left: 20px;
+    }
+
+    .main-content {
+        /* flex-direction: column; */
+        /* width: 100%;
+        max-width: 100%;
+        background-color: black; */
+    }
+
+    .center-content {
+        /* background-color: black; */
+        width: 100%;
+        max-width: 100%;
     }
 
 }
@@ -490,20 +503,21 @@ a:hover {
         display: flex;
         justify-content: flex-end;
     }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .center-content {
+        /* background-color: black; */
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        padding: 0 16px;
+        padding-top: 70px;
+    }
+
+    .
 }
 
-/* Responsive adjustments for smaller screens, tablets, and laptops */
-@media screen and (max-width: 1024px) {
-  /* 1. Hide the sidebars so they don't crush your center text on smaller windows */
-  .left-sidebar, 
-  .right-sidebar {
-    display: none;
-  }
-
-  /* 2. Let your main center article take up the full available width */
-  .main-content {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-  }
-}
